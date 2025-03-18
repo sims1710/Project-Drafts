@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Search Results</title>
+  <link rel="icon" href="/images/Icon.png" type="image/png">
+  <link href="/stylesheets/displayhotels.css" type="text/css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <!--Header Section-->
+    <nav>
+        <a href="/HomePage.html" class="logo"> <img src="/images/logo.png" alt="Website Logo"/></a>
+        <ul class="nav-list">
+            <li class="nav-item"><a href="/HomePage.html">Home</a></li>
+            <li class="nav-item"><a href="/DisplayHotels.html">Book</a></li>
+            <li class="nav-item"><a href="#">Profile</a></li>
+            <li class="nav-item"><a href="#">Help</a></li>
+        </ul>      
+    </nav>
+    <!--Search Bar Section-->
+    <section class= "section__container booking__container" id="Searching">
+        <form>
+            <div class="form__group">
+                <div class="input__group">
+                    <input type="text" placeholder="e.g. Singapore">
+                    <label>Location</label>
+                </div>
+            </div>
+            <div class="form__group">
+                <div class="input__group">
+                    <input type="date" class="input" id="check-in">
+                    <label>Check In</label>
+                </div>
+            </div>
+            <div class="form__group">
+                <div class="input__group">
+                    <input type="date" class="input" id="check-out">
+                    <label>Check Out</label>
+                </div>
+            </div>
+            <div class="form__group">
+                <div class="input__group">
+                    <input type="text" class="input" placeholder="e.g. 2">
+                    <label>Guests</label>
+                </div>
+            </div>
+            <div class="form__group">
+                <div class="input__group">
+                    <input type="text" class="input" placeholder="e.g. 2">
+                    <label>Rooms</label>
+                </div>
+            </div>
+        </form>
+        <button class="btn"><i class="ri-search-line"></i></button>
+    </section>
+    <!--TopBar Section-->
+    <section class="section__container topbar__container">
+        <div class="topBar">
+            <div class="topBarInfo">
+                Destination: <span id="destination"></span>|
+                Check-in: <span id="checkInDate"></span> |
+                Check-out: <span id="checkOutDate"></span> |
+                Guests: <span id="guestNum"></span> |
+                Rooms: <span id="roomNum"></span>           
+            </div>
+        </div>
+    </section>
+    <!--Filter Section-->
+    <section class="section__container filter__container">     
+        <div class="filter-bar">
+            <form>
+                <div class="filter__item title">
+                    <label for="title">Filter by:</label>
+                </div>
+                <!-- Input fields for price range and rating -->
+                <div class="filter__item rating">
+                    <label for="rating">Rating:</label>
+                    <div class="rating-slider">
+                        <input type="range" min="0" max="5" step="0.5" value="0" id="ratingRange">
+                        <span id="selectedRatingRange"></span>
+                    </div>
+                </div>
+            </form>
+        </div>                
+    </section>
+    <!--Hotel Section-->
+    <section class="section__container hotel__container">
+        <div id="hotelsContainer">
+            <!-- Permanent example hotel results -->
+            <div class="hotelSquare">
+                <img src="/images/atlantis.webp" alt="Hotel 1" class="hotelImage">
+                <div class="hotelName">Example Hotel 1 but you know my name super long bro</div>
+                <div class="hotelRating">Rating: 4.5 stars</div>
+                <div class="hotelPrice">Price: $200</div>
+                <a href="/DisplayRoom.html"><button class="selectButton">Select Hotel</button></a>
+            </div>
+
+            <div class="hotelSquare">
+                <img src="/images/lemeridien.webp" alt="Hotel 2" class="hotelImage">
+                <div class="hotelName">Example Hotel 2</div>
+                <div class="hotelRating">Rating: 4 stars</div>
+                <div class="hotelPrice">Price: $150</div>
+                <a href="/DisplayRoom.html"><button class="selectButton">Select Hotel</button></a>
+            </div>
+            <!-- Add more hotel squares here for more example results -->
+            <div class="hotelSquare">
+                <img src="/images/atlantis.webp" alt="Hotel 1" class="hotelImage">
+                <div class="hotelName">Example Hotel 1 but you know my name super long bro</div>
+                <div class="hotelRating">Rating: 4.5 stars</div>
+                <div class="hotelPrice">Price: $200</div>
+                <a href="/DisplayRoom.html"><button class="selectButton">Select Hotel</button></a>
+            </div>
+            <div class="hotelSquare">
+                <img src="/images/atlantis.webp" alt="Hotel 1" class="hotelImage">
+                <div class="hotelName">Example Hotel 1 but you know my name super long bro</div>
+                <div class="hotelRating">Rating: 4.5 stars</div>
+                <div class="hotelPrice">Price: $200</div>
+                <a href="/DisplayRoom.html"><button class="selectButton">Select Hotel</button></a>
+            </div>
+            <div class="hotelSquare">
+                <img src="/images/atlantis.webp" alt="Hotel 1" class="hotelImage">
+                <div class="hotelName">Example Hotel 1 but you know my name super long bro</div>
+                <div class="hotelRating">Rating: 4.5 stars</div>
+                <div class="hotelPrice">Price: $200</div>
+                <a href="/DisplayRoom.html"><button class="selectButton">Select Hotel</button></a>
+            </div>
+            <div class="hotelSquare">
+                <img src="/images/atlantis.webp" alt="Hotel 1" class="hotelImage">
+                <div class="hotelName">Example Hotel 1 but you know my name super long bro</div>
+                <div class="hotelRating">Rating: 4.5 stars</div>
+                <div class="hotelPrice">Price: $200</div>
+                <a href="/DisplayRoom.html"><button class="selectButton">Select Hotel</button></a>
+            </div>
+            <div class="hotelSquare">
+                <img src="/images/atlantis.webp" alt="Hotel 1" class="hotelImage">
+                <div class="hotelName">Example Hotel 1 but you know my name super long bro</div>
+                <div class="hotelRating">Rating: 4.5 stars</div>
+                <div class="hotelPrice">Price: $200</div>
+                <a href="/DisplayRoom.html"><button class="selectButton">Select Hotel</button></a>
+            </div>
+            <div class="hotelSquare">
+                <img src="/images/atlantis.webp" alt="Hotel 1" class="hotelImage">
+                <div class="hotelName">Example Hotel 1 but you know my name super long bro</div>
+                <div class="hotelRating">Rating: 4.5 stars</div>
+                <div class="hotelPrice">Price: $200</div>
+                <a href="/DisplayRoom.html"><button class="selectButton">Select Hotel</button></a>
+            </div>
+            <div class="hotelSquare">
+                <img src="/images/atlantis.webp" alt="Hotel 1" class="hotelImage">
+                <div class="hotelName">Example Hotel 1 but you know my name super long bro</div>
+                <div class="hotelRating">Rating: 4.5 stars</div>
+                <div class="hotelPrice">Price: $200</div>
+                <a href="/DisplayRoom.html"><button class="selectButton">Select Hotel</button></a>
+            </div>
+            <div class="hotelSquare">
+                <img src="/images/atlantis.webp" alt="Hotel 1" class="hotelImage">
+                <div class="hotelName">Example Hotel 1 but you know my name super long bro</div>
+                <div class="hotelRating">Rating: 4.5 stars</div>
+                <div class="hotelPrice">Price: $200</div>
+                <a href="/DisplayRoom.html"><button class="selectButton">Select Hotel</button></a>
+            </div>
+            <div class="hotelSquare">
+                <img src="/images/atlantis.webp" alt="Hotel 1" class="hotelImage">
+                <div class="hotelName">Example Hotel 1 but you know my name super long bro</div>
+                <div class="hotelRating">Rating: 4.5 stars</div>
+                <div class="hotelPrice">Price: $200</div>
+                <a href="/DisplayRoom.html"><button class="selectButton">Select Hotel</button></a>
+            </div>
+            <div class="hotelSquare">
+                <img src="/images/atlantis.webp" alt="Hotel 1" class="hotelImage">
+                <div class="hotelName">Example Hotel 1 but you know my name super long bro</div>
+                <div class="hotelRating">Rating: 4.5 stars</div>
+                <div class="hotelPrice">Price: $200</div>
+                <a href="/DisplayRoom.html"><button class="selectButton">Select Hotel</button></a>
+            </div>
+            <div class="hotelSquare">
+                <img src="/images/atlantis.webp" alt="Hotel 1" class="hotelImage">
+                <div class="hotelName">Example Hotel 1 but you know my name super long bro</div>
+                <div class="hotelRating">Rating: 4.5 stars</div>
+                <div class="hotelPrice">Price: $200</div>
+                <a href="/DisplayRoom.html"><button class="selectButton">Select Hotel</button></a>
+            </div>
+        </div>
+    </section>
+    <!--Page Section-->
+    <section class="section__container page__container">
+        <div class="page">
+            <div class="paginationContainer">
+                <!-- Number of pages will be dynamically generated using JavaScript -->
+            </div>
+        </div>
+    </section>
+    <script src="/javascripts/displayHotels.js"></script>
+</body>
+<footer class="footer">
+    <nav>
+        <a href="/HomePage.html" class="logo_bottom"> <img src="/images/logo.png" alt="Website Logo"/></a>
+    </nav>
+</footer>
+</html>

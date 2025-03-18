@@ -1,0 +1,270 @@
+@import "homepage.css";
+@import "displayhotels.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Payment Styles*/
+.payment_wrapper {
+    background-color: #fff;
+    width: 500px;
+    padding: 25px;
+    margin: 25px auto 0;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.payment_wrapper h2 {
+    background-color: #fcfcfc;
+    color: var(--primary-color);
+    font-size: 24px;
+    padding: 10px;
+    margin-bottom: 8px;
+    text-align: center;
+    border: 1px dashed var(--primary-color-dark);
+}
+
+.payment_wrapper h4 {
+    padding-bottom: 5px;
+    color: var(--primary-color)f;
+}
+
+.input_grp {
+    margin-bottom: 8px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding: 5px 0;
+}
+
+.input_box {
+    width: 100%;
+    margin-right: 12px;
+    position: relative;
+}
+
+.input_box:last-child {
+    margin-right: 0;
+}
+
+.input_box .name {
+    padding: 14px 10px 14px 50px;
+    width: 100%;
+    background-color: #fcfcfc;
+    border: 1px solid #0003;
+    outline: none;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    border-radius: 3px;
+    color: #333;
+}
+
+.input_box .name:focus, .dob:focus {
+    -webkit-box-shadow: 0 0 2px 1px var(--primary-color-dark);
+    -moz-box-shadow: 0 0 2px 1px var(--primary-color-dark);
+    box-shadow: 0 0 2px 1px var(--primary-color-dark);
+    border: 1px solid var(--primary-color-dark);
+}
+
+.input_box textarea {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.input_box .icon{
+    width: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    color: #333;
+    background-color: #e9e5e5;
+    border-radius: 2px 0 0 2px;
+    transition: 0.3s;
+    font-size: 20px;
+    pointer-events: none;
+    border: 1px solid #00000003;
+    border-right: none;
+}
+
+.name:focus+.icon {
+    background-color: var(--primary-color-dark);
+    color: #fff;
+    border-right: 1px solid var(--primary-color-dark);
+    border: none;
+    transition: 1s;
+}
+
+.dob {
+    width: 30%;
+    padding: 14px;
+    text-align: center;
+    background-color: #fcfcfc;
+    transition: 0.3s;
+    outline: none;
+    border: 1px solid #c0bfbf;
+    border-radius: 3px;
+}
+
+.radio {
+    display: none;
+}
+
+.input_box label {
+    width: 50%;
+    padding: 13px;
+    background-color: #fcfcfc;
+    display: inline-block;
+    float: left;
+    text-align: center;
+    border: 1px solid #c0bfbf;
+}
+
+.input_box label:first-of-type {
+    border-top-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-right: none;
+}
+
+.input_box label:last-of-type {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.radio:checked+label {
+    background-color: var(--primary-color-dark);
+    color: #fff;
+    transition: 0.5s;
+}
+
+.input_box button {
+    width: 100%;
+    background-color: var(--primary-color-dark);
+    border: none;
+    color: #fff;
+    padding: 15px;
+    border-right: 4px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+.input_box button:hover {
+    cursor: pointer;
+    background-color: var(--primary-color);
+}
+
+/* Existing styles for input boxes */
+.input_grp {
+    /* ... other styles ... */
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Align items vertically in the center */
+}
+
+.input_box {
+    /* ... other styles ... */
+    flex: 1; /* Distribute available space evenly among input boxes */
+}
+
+.name {
+    /* ... other styles ... */
+    font-size: 16px; /* Change font size if needed */
+}
+
+.dob {
+    /* ... other styles ... */
+    font-size: 16px; /* Change font size if needed */
+}
+
+/* Styles for select boxes */
+.select-box {
+    /* Apply the same styles as the other input boxes */
+    width: 100%;
+    padding: 14px 10px 14px 50px;
+    background-color: #fcfcfc;
+    border: 1px solid #0003;
+    outline: none;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    border-radius: 3px;
+    color: #333;
+}
+
+/* Existing styles for input boxes */
+.input_grp {
+    /* ... other styles ... */
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Align items vertically in the center */
+}
+
+.input_box {
+    /* ... other styles ... */
+    flex: 1; /* Distribute available space evenly among input boxes */
+}
+
+.name {
+    /* ... other styles ... */
+    font-size: 16px; /* Change font size if needed */
+}
+
+/* Styles for select boxes */
+.select-box {
+    /* Apply the same styles as the other input boxes */
+    flex: 1;
+    padding: 14px 10px 14px 50px;
+    background-color: #fff;
+    border: 1px solid #0003;
+    outline: none;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    border-radius: 3px;
+    color: #333;
+}
+
+/* Adjust the height to match the other input boxes */
+.select-box {
+    height: 54px;
+}
+
+/* Additional styles for the "DD MM YYYY" container */
+.dob-container {
+    display: flex;
+    gap: 0.4rem; /* Add a 0.1rem gap between DD, MM, and YYYY */
+}
+
+/* Adjust the widths for DD and MM */
+#dayDropdown,
+#monthDropdown {
+    flex: 1.2; /* Equal width for DD and MM */
+}
+
+/* Increase the width of YYYY */
+#yearDropdown {
+    flex: 1.7; /* Double the width of YYYY compared to DD and MM */
+}
+
+/* Apply styles on hover individually */
+#dayDropdown:hover,
+#monthDropdown:hover,
+#yearDropdown:hover {
+    border-color: var(--primary-color);
+}
+ 
+/*Footer Styles*/
+.footer {
+    color: #fff;
+    text-align: center;
+    margin-top: 30px; /* Add margin to create separation */
+}
+  
+.logo_bottom img {
+    margin: auto;
+}
